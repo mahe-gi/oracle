@@ -1,0 +1,124 @@
+                                 SQL QUESTIONS
+                               ================
+
+1.What is oracle ?
+   Oracle is a relational database product which is used to
+store data permanently in secondary storage.
+
+-----------------------------------------------------------------------------------
+
+2.What is database ?
+      Database is a place where we can store structured collection of
+inter related data.
+
+-----------------------------------------------------------------------------------
+
+3.What are the differences b/w dbms and rdbms?
+
+-----------------------------------------------------------------------------------
+                    DBMS               |                 RDBMS
+-----------------------------------------------------------------------------------
+1.if any Database which satisfies less |1.if any database which satisfies more
+  then 6 codd rules are called as      |  than 6 codd rules then those databases 
+  DBMS software.                       |  are also called as relational databases. 
+                                       |
+2. in dbms we are establishing         |2.where as in rdbms we are establishing 
+   relationship b/w tables by using    |  relationship b/w tables by using
+   programs.                           |  constraints.
+                                       |
+3.There is no normalization concept.   |3.Normalization concept is available.                                    
+                                       |
+eg:-                                   |eg:-
+==                                     |===
+foxpro,dbasell+                        |oracle,sqlserver,mysql,db2....etc
+                                       |
+-----------------------------------------------------------------------------------
+
+4.What is SQL?
+  SQL is structured query language.in sql we are writing queries.
+with the help of queries we are communicating with the database.
+
+  Sql language was introduced by E.F Codd. He is mathematician that's
+why he was represented data in the format of matrix( rows and columns).
+
+
+-----------------------------------------------------------------------------------
+
+5.What are the differences b/w char and varchar2?
+-----------------------------------------------------------------------------------     
+    char                           |             varchar2
+-----------------------------------------------------------------------------------
+1.char is a fixed length alpha     |1.varchar2 is a variable length
+  numeric data type.               |  alphanumeric data type.
+                                   |
+2.Memory is wasted.                |2.Memory is not wasted.
+                                   |
+3.char datatype stores up to       |3.varchar2 datatype stores 
+  2000 bytes                       |  up to 4000 bytes.
+                                   |
+-----------------------------------------------------------------------------------
+
+
+6.What are the differences b/w varchar and varchar2?
+
+-----------------------------------------------------------------------------------
+             varchar               |             varchar2
+-----------------------------------------------------------------------------------
+1.varchar is ansi standard data    |1.varchar2 is a oracle datatype
+  type.                            |
+                                   |
+2.varchar datatype stores up to    |2.varchar2 datatype stores up to
+  2000 bytes.                      |  4000 bytes.
+                                   |
+-----------------------------------------------------------------------------------
+7.What are commands in sql ?List all the commands ?
+
+
+-----------------------------------------------------------------------------------
+
+8.What are DDL commands?list out all DDL commands?
+
+DDL stands for DATA DEFINATION LANGUAGE.The following are the
+DDL commands.
+1.Create
+2.Alter
+3.Drop
+4.Truncate
+5.Flashback
+6.Purge
+7.Rename
+
+  in DDL we are performing all operations on
+Struture.
+
+Create:- It is used to create database objects like 
+=======  tables,views,sequences,indexes,procedures,
+         functions...etc 
+-----------------------------------------------------------------------------------
+
+9.What are DML commands?list out all DML commands?
+
+  DML Stands for DATA MANIPULATION LNAGUAGE.The following are
+the DML commands
+
+1.Insert
+2.Update 
+3.Delete
+4.Merge
+5.Insert all
+
+  in DML all operations we are performing on data.
+
+
+Update:- It is used to change data within a table or modify the table data.
+=======
+
+Syntax:- update tablename set columnname=newvalue 
+=======    where columnname=oldvalue; 
+-----------------------------------------------------------------------------------
+
+
+
+
+
+

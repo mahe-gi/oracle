@@ -1,0 +1,58 @@
+                              ORACLE 21c SOFTWARE LINK
+                           ==============================
+
+ORACLE 21c SOFTWARE DOWNLOAD LINK:-
+=================================
+
+  bit.ly/oracle21csoftware
+
+--->Copy the above link and paste it into the Google Chrome address bar.
+
+--->A ZIP file will appear. Right-click on the ZIP file and select the
+    Download option, or click the Download icon.
+
+--->select download anyway.
+
+--->Download the software from your hostel.Tomorrow, I will explain
+    the installation process in our lab.
+
+
+
+one more thing if you are using this link then oracle account creation
+is not required.
+
+To install the oracle s/w minimum 10gb memory is required
+
+Folder Setup Before Installation:-
+================================
+
+--->in c (or) d drive create new folder with the named oracle.
+
+--->Inside the oracle folder, create another folder named db_home.
+
+
+Extracting the Software:-
+========================
+
+--->Go to your downloads folder downloaded s/w is avalible.
+
+--->right click on zip file select Extract files option.
+
+     c drive
+         ---->oracle
+                 ----->db_home
+
+Installation Steps:-
+==================
+---->After extraction is completed,at last setup file is available
+     with Red colour.
+
+---->Right-click on the setup file and select Run as administrator.
+
+---->click allow yes.
+
+
+
+
+
+------------------DON'T FORGET TO DOWNLOAD --------------------------------------------
