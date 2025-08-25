@@ -5,7 +5,7 @@
 
 a) Data deleting language
 
-b) Data definition language
+b) Data definition language ✅
 
 c) Data delegating language         
 
@@ -18,11 +18,11 @@ Answer:
 
 a)SELECT
 
-b)INSERT
+b)INSERT 
 
-c)CREATE
+c)CREATE ✅
 
-d)UPDATE
+d)UPDATE 
 
 
 Answer: 
@@ -33,16 +33,16 @@ a) CREATE
 
 b) ALTER
 
-c) SELECT
+c) SELECT ✅
 
-d) DROP
+d) DROP 
 
 
 Answer: 
 -----------------------------------------------------------------------------------
 4.Which command permanently removes a table and its data from the database ?
 
-a)DROP
+a)DROP ✅
 
 b)DELETE
 
@@ -57,7 +57,7 @@ Answer:
 
 a) CHANGE
 
-b) ALTER
+b) ALTER ✅
 
 c) MODIFY
 
@@ -68,7 +68,7 @@ Answer:
 -----------------------------------------------------------------------------------
 6.The TRUNCATE command in Oracle is used to
 
-a) Remove all rows from a table without logging individual row deletions
+a) Remove all rows from a table without logging individual row deletions ✅
 
 b) Remove the table structure
 
@@ -81,7 +81,7 @@ Answer:
 -----------------------------------------------------------------------------------
 7. Which of the following commands can be used to rename a table in Oracle?
 
-a) RENAME
+a) RENAME ✅
 
 b) CHANGE
 
@@ -94,9 +94,9 @@ Answer:
 -----------------------------------------------------------------------------------
 8. What is the effect of the DROP command on a table?
 
-a) Deletes all rows but keeps the structure
+a) Deletes all rows but keeps the structure 
 
-b) Deletes the table structure and data
+b) Deletes the table structure and data✅
 
 c) Only deletes data
 
@@ -111,7 +111,7 @@ a) INSERT
 
 b) ADD
 
-c) ALTER
+c) ALTER ✅
 
 d) CREATE
 
@@ -120,7 +120,7 @@ Answer:
 -----------------------------------------------------------------------------------
 10.Which of the following is a DML command ?
 
-a)DELETE
+a)DELETE ✅
 
 b)CREATE
 
@@ -138,7 +138,7 @@ a) DROP
 
 b) DELETE
 
-c) TRUNCATE
+c) TRUNCATE ✅
 
 d) REMOVE
 
@@ -151,7 +151,7 @@ SQL>ALTER TABLE employees DROP COLUMN salary;
 
 a) Drops the employees table
 
-b) Drops the salary column from employees table
+b) Drops the salary column from employees table ✅
 
 c) Drops all data from employees table
 
@@ -162,7 +162,7 @@ Answer:
 -----------------------------------------------------------------------------------
 13.Which command would you use to change the datatype of a column in a table?
 
-a) ALTER TABLE MODIFY
+a) ALTER TABLE MODIFY ✅
 
 b) ALTER TABLE CHANGE
 
@@ -177,7 +177,7 @@ Answer:
 
 a) DROP removes only data, TRUNCATE removes structure
 
-b) DROP removes structure and data, TRUNCATE removes only data
+b) DROP removes structure and data, TRUNCATE removes only data ✅
 
 c) DROP can be rolled back, TRUNCATE cannot
 
@@ -190,7 +190,7 @@ Answer:
 
 a)ADD
 
-b)INSERT
+b)INSERT ✅
 
 c)UPDATE
 
@@ -207,14 +207,13 @@ b)MODIFY
 
 c)UPDATE
 
-d)ALTER
-
+d)ALTER ✅
 
 Answer:
 -----------------------------------------------------------------------------------
 17.Which statement is used to retrieve data from a table ?
 
-a)SELECT
+a)SELECT ✅
 
 b)GET
 
@@ -231,7 +230,7 @@ a)INSERT
 
 b)UPDATE
 
-c)DROP
+c)DROP ✅
 
 d)DELETE
 
@@ -242,7 +241,7 @@ Answer:
 
 a)They can be rolled back.
 
-b)They implicitly commit transactions.
+b)They implicitly commit transactions. ✅
 
 c)They only affect data,not structure.
 
@@ -253,9 +252,9 @@ Answer:
 -----------------------------------------------------------------------------------
 20.Which command is used to change the datatype of a column in a table ?
 
-a)ALTER TABLE MODIFY
+a)ALTER TABLE MODIFY ✅
 
-b)ALTER TABLE CHANGE
+b)ALTER TABLE CHANGE 
 
 c)UPDATE TABLE
 
@@ -268,7 +267,7 @@ Answer:
 
 a)REMOVE TABLE CUSTOMERS;
 
-b)DROP TABLE CUSTOMERS;
+b)DROP TABLE CUSTOMERS; ✅
 
 c)DELETE TABLE CUSTOMERS;
 
@@ -279,7 +278,7 @@ Answer:
 -----------------------------------------------------------------------------------
 22.What is the syntax for creating a table?
 
-a)create table [schema].tablename(column datatype [defaultexpr][...]);
+a)create table [schema].tablename(column datatype [defaultexpr][...]);✅
 
 b)create table into [schema]table(column datatype [default expr][...]);
 
@@ -294,7 +293,7 @@ Answer:
 
 a)delete status from queue;
 
-b)alter table queue drop column status;
+b)alter table queue drop column status; ✅
 
 c)delete column status from queue;
 
@@ -308,7 +307,7 @@ Answer:
 Alter table student add address varchar2(20);
 
 
-a)Adds a column called ADDRESS in the table student
+a)Adds a column called ADDRESS in the table student ✅
 
 b)Checks if a column called ADDRESS is present in the table student
 
@@ -335,7 +334,7 @@ b) Insert into Instructor values (5, SURYA);
 
 c) Insert into Instructor values ('5', 'SURYA');
 
-d) Insert into Instructor (Id, Name) values (5, 'SURYA');
+d) Insert into Instructor (Id, Name) values (5, 'SURYA'); ✅
 
 
 Answer:
@@ -344,7 +343,7 @@ Answer:
 
 a)DELETE is DDL,TRUNCATE is DML
 
-b)DELETE can be rolled, TRUNCATE can not
+b)DELETE can be rolled, TRUNCATE can not ✅
 
 c)TRUNCATE fires DELETE triggers
 
@@ -361,7 +360,7 @@ b) MODIFY Users SET LastName = 'Michel' WHERE LastName = 'Thomas';
 
 c) MODIFY Users SET LastName = 'Thomas' INTO LastName = 'Michel';
 
-d) UPDATE Users SET LastName = 'Michel' WHERE LastName = 'Thomas';
+d) UPDATE Users SET LastName = 'Michel' WHERE LastName = 'Thomas';✅
 
 
 Answer:
@@ -371,7 +370,7 @@ Answer:
 
 a)Oracle will truncate the string to fit the specified length.
 
-b)Oracle will pad the string with spaces to the specified length.
+b)Oracle will pad the string with spaces to the specified length. ✅
 
 c)Oracle will raise an error.
 
@@ -384,7 +383,7 @@ Answer:
 
 a)CHAR
 
-b)VARCHAR2
+b)VARCHAR2 ✅
 
 c)NUMBER
 
@@ -400,7 +399,7 @@ a)Trigger
 
 b)View
 
-c)Table
+c)Table ✅
 
 d)Index
 
