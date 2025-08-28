@@ -1,0 +1,57 @@
+                  1.Arithmetic operators
+                  =======================
+
+•Arithmetic operators are used in number,date datatype columns.
+
+Note:-Arithmetic operators are used in select clause. Rarely we are using
+=====  in where clause.
+
+
+1.Write a query to display ename, sal, annsal from emp table?
+
+
+2.Calculate the experience of the all employees from emp table?
+
+
+sysdate:-it returns current date of the system in oracle date 
+=======    format.in oracle by default date format
+                        is DD-MON-YY
+
+
+
+
+3.Calculate TA,HRA,TAX and NETSAL from emp table based on
+  following conditions?
+
+10% on sal =>TA
+20% on sal =>HRA
+5% on sal  =>TAx
+NETSAL=SAL+TA+HRA-TAX
+
+[TA--->Total Allowance  HRA--->House Rent Allowances   NETSAL--->Take-home Salary]
+
+Gross Salary includes all earnings (before deductions).
+
+Net Salary is the actual salary received after all deductions.
+
+
+4.Write a query to display the all employee salaries after 
+  adding 1200 rupees?
+
+
+5.create the student1 table and insert the records as below.
+
+  SNO      SNAME      SUB1         SUB2        SUB3 
+  -----    -------    ------       ------      ------  
+    1      GOWTHAM      72           18          24
+    2       KAVYA       60           50          45
+    3      PREETHI      12           30          25
+    4       KIRAN       80           88          74
+
+
+Q)Calculate the total marks of each student from the 
+  student1 table?
+
+Q)Calculate the average marks of student from the
+  student1 table?
+
