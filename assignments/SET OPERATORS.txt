@@ -1,0 +1,146 @@
+                               SET OPERATORS
+                           =====================
+
+Set operators are used to retrivew data from single or multiple
+tables.
+
+Set operators are also called as virtical joins.oracle having following
+set operators.These are
+
+1.UNION       ---------->return values unique time+sorting
+2.UNION ALL   ---------->unique+dulicates
+3.INTERSECT   ---------->common values
+4.MINUS       ---------->values are in first query and those values are not
+                         in second query
+
+1.UNION:-Returns the values unique+sorting
+========
+
+
+SQL> select job from emp where deptno=10;
+
+
+JOB
+---------
+MANAGER
+PRESIDENT
+CLERK
+
+
+SQL> select job from emp where deptno=20;
+
+JOB
+---------
+CLERK
+MANAGER
+ANALYST
+CLERK
+ANALYST
+
+
+ex:-
+===
+SQL>select job from emp where deptno=10
+              union
+    select job from emp where deptno=20;
+
+
+JOB
+---------
+ANALYST
+CLERK
+MANAGER
+PRESIDENT
+
+
+2.UNION ALL:-unique+duplicates
+===========
+
+eg:-
+===
+SQL>select job from emp where deptno=10
+              union all
+    select job from emp where deptno=20;
+
+JOB
+---------
+MANAGER
+PRESIDENT
+CLERK
+CLERK
+MANAGER
+ANALYST
+CLERK
+ANALYST
+
+3.INTERSECT:-common values
+===========
+
+eg:-
+===
+SQL>select job from emp where deptno=10
+              intersect
+    select job from emp where deptno=20;
+
+ JOB
+--------
+CLERK
+MANAGER
+
+
+4.MINUS:-values are in first query and those values are not
+=======   in second query
+
+
+eg:-
+===
+SQL>select job from emp where deptno=10
+              minus
+    select job from emp where deptno=20;
+
+JOB
+---------
+PRESIDENT
+
+----------------------------------------------------------------------------------
+QUESTION:-
+=========
+
+SQL>SELECT * FROM T1;
+
+      SNO            
+    -------
+      1
+      1
+      2
+      2
+      3
+      4
+      4
+
+SQL>SELECT * FROM T2;
+ 
+      SNO
+     -----
+       1
+       1
+       1
+       1
+       5
+       5
+       5
+       5
+
+IN THESE 2 TABLES WHAT EVER DATA IS THERE I WANT TO DISPLAY IN A WHERE
+     
+     SNO
+   -------
+      1
+      2
+      3
+      4
+      5
+
+HOW CAN I
+
+

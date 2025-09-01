@@ -1,0 +1,138 @@
+                             EXAM PAPER
+                           ==============
+
+1.Write an SQL query to create a table named EMP8 with the
+  following columns (2M)
+ 
+    • EMPID
+    • ENAME
+    • JOB
+    • SAL
+    • DEPTNO
+
+
+2a.Write an SQL query to insert the following records into the 
+   EMP8 table(2M)
+
+
+101    Alice        CLERK          50000    10
+102    Jack         MANAGER        20000    20
+103    Bob          SALESMAN       40000    10
+104    Julia        CLERK          30000    30
+105    Jasmine     SALESMAN        15000    30
+
+
+2b.Write a query to add a new employee record with the employee name 'John Doe' 
+   and a salary of 45000 into the EMP8 table.(1M)
+
+
+3a.Write a query to add HIREDATE column to the EMP8 table.(1M)
+
+
+3b.Write a query to drop HIREDATE column from the EMP8 table.(1M)
+
+
+4a.Write a query to drop the EMP8 table.(1M)
+
+
+4b.Write a query to restore the EMP8 table.(1M)
+
+
+5.What is the command to rename the table EMP8 to EMP9? (1M)
+
+
+6A.Set JOB as a 'MANAGER' and increase 2000 rupees to employee 
+   whose names start with 'A' and ends with 'e' from the  
+   EMP9 table ?(2M)
+
+
+6B.Write a query to increase salary by 20% for the employees
+   of department 30 in the emp9 table.(2M)
+
+
+7.Delete all employees from the EMP9 table whose salary
+  is less than 20000(1M)
+
+
+8.Calculate TA,HRA,TAX and NETSAL from emp table based on
+  following conditions?(2M)
+
+10% on sal =>TA
+20% on sal =>HRA
+5% on sal  =>TAx
+NETSAL=SAL+TA+HRA-TAX
+
+[TA--->Total Allowance  HRA--->House Rent Allowances   NETSAL--->Take-home Salary]
+
+Gross Salary includes all earnings (before deductions).
+
+Net Salary is the actual salary received after all deductions.
+
+
+9.Write a query to display the employees who are belongs to 
+  20,30,50,70,90 departments from emp table?(1M)
+
+
+
+10.Write a SQL query to display the employee name, sal, comm, and 
+   total salary (sal + comm) of all employees from emp table ?(2M)
+
+
+
+11.Write an sql query to display the first name(use alias name 
+   staff first name ),position and salary of staff members 
+   where salary is greater than 50000 ?(2M)
+
+SQL> SELECT * FROM STAFF;
+
+   STAFF_ID     FIRST_NAME       LAST_NAME       POSITION        SALARY
+   --------    ------------    ------------    -----------     ----------
+       1         ANUSHKA         SHETTY          MANAGER         60000
+       2         KIRAN           KUMAR           DEVELOPER       48000
+       3         GOWTHAM         RAJ             TEAM LEAD       75000
+       4         KAVYA           PAPA            HR              51000
+       5         PREETI          ZINTA           CLERK           30000
+
+
+
+12.Write a query to display the employees whose ename start with S 
+   from emp table using like operator?(1M)
+
+
+
+13.Write a query to display the employees whose ename contains 'SIRISHA' 
+   anywhere in their name from EMP555 table ?(2M)
+
+SQL>SELECT * FROM EMP555;
+
+           ENAME
+     ----------------
+      SIRISHA GAYATRI
+      GAYATRI SIRISHA
+      ANUSHKA SHETTY
+      ANU SIRISHA RAI
+      SURYA SURYA
+
+
+14.Write a query to display employees who are working as either 'MANAGER' or 'CLERK' 
+   and earning salary between 1500 and 3000 and joined in the year 1981 
+   and are not working in departments 10 or 20 from EMP table ?(3M)
+
+
+
+15.Write an SQL query to display the NAME(use alias USERNAME) and their 
+   email (use alias EMAILID) of users who have a phone number 
+   ending with '29' from the USERS table(2M)
+
+SQL> SELECT * FROM USERS;
+
+      USER_ID        NAME                EMAIL            PHONE_NUMBER
+      -------    ---------------   ------------------    ---------------
+         1         ANUSHKA         anushka@gmail.com       9876526229
+         2         GOWTHAM         gowtham@gmail.com       9912347810
+         3         SURYA           surya@gmail.com         9988776629
+         4         KAVYA PAPA      kavya@gmail.com         9988776655
+
+
+
+

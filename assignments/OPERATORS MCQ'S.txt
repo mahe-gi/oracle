@@ -1,0 +1,334 @@
+                             OPERATORS MCQ'S
+                            =================
+
+1.Which operator in Oracle is used to compare two values for equality?
+
+a) =
+
+b) ==
+
+c) :=
+
+d) EQ
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+2.The ‘||’ operator in Oracle is used for:
+
+a) Addition
+
+b) Concatenation
+
+c) Subtraction
+
+d) Division
+
+
+Answer:
+-----------------------------------------------------------------------------------
+3.Which operator is used to check if a value exists in a list of values?
+
+a) LIKE
+
+b) IN
+
+c) BETWEEN
+
+d) EXISTS
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+4.For NULL comparison purpose which operators we are used in oracle SQL
+
+a) =, !=
+
+b) IS NULL, IS NOT NULL
+
+c) ==, <>
+
+d) IS NULL, IS EQUAL TO
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+5.The BETWEEN operator in Oracle is used to:
+
+a) Check if a value matches a pattern
+
+b) Check if a value falls within a range
+
+c) Check if a value is NULL
+
+d) Concatenate two strings
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+6.Which of the following is NOT a valid operator in Oracle SQL?
+
+a) +
+
+b) -
+
+c) *
+
+d) %%
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+7.What is the output of the following statement?
+
+  SQL>select * from emp where sal between 4000 and 2000;
+
+a) it returns who are getting the salaries from 4000 to 2000
+
+b) it returns who are getting the salaries from 2000 to 4000
+
+c) No rows selected
+
+d) both A and B
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+8.SELECT * FROM EMPLOYEE WHERE SALARY>10000 AND DEPT_ID=101;
+
+  WHICH OF THE FOLLOWING FEILDS ARE DISPLAYED AS OUTPUT
+
+a) SALARY,DEPT_ID
+
+b) EMPLOYEE
+
+c) SALARY
+
+d) ALL THE FEILDS OF THE EMPLOYEE
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+9.Which SQL query will result in an error?
+
+a) SELECT * FROM employees WHERE name = 'John' AND employee_id = 101;
+
+b) SELECT * FROM employees WHERE age > 25 OR salary < 50000;
+
+c) SELECT employee_id, name FROM employees WHERE salary 
+   BETWEEN 30000 AND 50000;
+
+d) SELECT employee_id, name WHERE age > 25;
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+10.Which operator is used to search for specified pattern in a column
+
+a) Get
+
+b) Like
+
+c) From
+
+d) In
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+11.Which SELECT query returns all rows where the employee name starts
+   with S?
+
+a) select * from emp where ename ='S%';
+
+b) select * from emp where ename like '%S%';  
+
+c) select * from emp where ename like 'S%';
+
+d) select * from emp where ename like %S';
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+12.What is the result of this query:
+
+SELECT NULL + 100 FROM DUAL;
+
+a) 100
+
+b) NULL
+
+c) ERROR
+
+d) 0
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+13.When three or more OR conditions are combined, which operators 
+   is used to replace to make the query simple?
+
+a) Like
+
+b) Between
+
+c) AND OR
+
+d) In
+
+
+Answer:
+-----------------------------------------------------------------------------------
+14.The SAL column stores the monthly salary of the employee. 
+   Which of the following query calculate the annual compensation as
+   monthly salary plus(+) a monthly
+   bonus of 100 ?
+
+a) SELECT ename, sal, 12*(sal+100) FROM emp;
+
+b) SELECT ename, sal, (12*sal)+100 FROM emp;
+
+c) SELECT ename, sal+100,*12 FROM emp;
+
+d) NONE
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+15.In SQL, which of the following will correctly concatenate 
+    first name and last name with a space in between?
+
+a) CONCAT(first_name, ' ', last_name)
+
+b) first_name +' '+ last_name
+
+c) first_name ||' '|| last_name
+
+d) Both A and C
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+16.Null means
+
+a) Zero
+
+b) -1
+
+c) 1
+
+d) Empty
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+17.Which datatype accepts IMAGES, AUDIO FILES, VIDEO FILES
+
+a) NUMBER
+
+b) TIMESTAMP
+
+C) BLOB
+
+d) VARCHAR2
+
+
+Answer:
+-----------------------------------------------------------------------------------
+18.Which operator is used to comparing NULLs
+
+a) NULL
+
+b) NVL
+
+c) IS NULL
+
+d) NULLIF
+
+
+Answer: 
+----------------------------------------------------------------------------------
+19.Which of the following SQL query will correctly return all employees whose
+   name contains 'SIRISHA' from the employee table?
+
+a) select * from employee where ename like 'SIRISHA%';
+
+
+b) select * from employee where ename like '%SIRISHA%';
+
+
+c) select * from employee where ename like 'SIRISHA';
+
+
+d) select * from employee where ename like 'S%';
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+20.Which operator is used to combine two conditions and returns TRUE 
+   if both are TRUE?
+
+a) OR
+
+b) AND
+
+c) NOT
+
+d) LIKE
+
+
+Answer: 
+-----------------------------------------------------------------------------------
+21.Which operator is used to combine the results of two queries and remove 
+   duplicate rows ?
+
+a)UNION
+
+b)UNION ALL
+
+c)INSERT ALL
+
+d)MINUS
+
+Answer: 
+-----------------------------------------------------------------------------------
+22.Which operator returns only the rows that are present in both queries ? 
+
+a)UNION 
+
+b)INTERSECT
+
+c)MINUS
+
+d)JOIN
+
+Answer: 
+----------------------------------------------------------------------------------
+23.Which operator is used to subtract the results of the second query from the first ?
+
+a)UNION
+
+b)INTERSECT
+
+c)MINUS
+
+d)EXCEPT
+
+Answer: 
+-----------------------------------------------------------------------------------
+24.Which alias syntax is invalid in Oracle SQL?
+
+a) select sal*12 as "annual salary" from emp;
+
+b) select sal*12 "annual salary" from emp;
+
+c) select sal*12 as annual_salary from emp;
+
+d) select sal*12 as 'annual salary' from emp;
+
+e) none of the above
+
+
+Answer: 
+--------------------------------------***END***------------------------------------
+
