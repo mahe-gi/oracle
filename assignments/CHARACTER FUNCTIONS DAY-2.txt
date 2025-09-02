@@ -1,0 +1,132 @@
+                           CHARACTER FUNCTIONS
+                          ======================
+
+1.Check the outputs of following instr() queries
+
+instr():-it is used to check whether the substring is existed 
+=======         in the given string or not.
+
+
+•if sub string is existed in the given string, it returns the position.
+
+•if sub string is not existed in the given string ,it returns 0.
+
+syntax: instr(columnname(or)string , sub string, searching
+=======              position, No of occurrences from searching position);
+
+
+Searching position -> +ve or –ve
+Searching and No of occurrences -> must be numbers.
+
+
+ always instr() returns position based on last 2 parameters 
+but oracle server counts number of characters always left side first 
+position onwards.
+
+
+SQL> select instr('ABC*D','*') from dual; // it returns the position of the 
+                                            delemiters(special characters)
+
+SQL> select instr('ABCDEFGHCDKMNBCDJ','CD',1,1) from dual;
+
+
+SQL> select instr('ABCDEFGHCDKMNBCDJ','CD',5,2) from dual;
+
+
+SQL> select instr('ABCDEFGHCDKMNBCDJ','CD',-5,2) from dual;
+
+
+SQL> select instr('krishna stami lord krishna jai krishna',
+                 'krishna',1,2) from dual;
+
+
+
+SQL> select instr('krishna stami lord krishna jai krishna',
+                  'krishna',-1,3) from dual;
+
+
+SQL> select instr('gowtham raj','raj') from dual;
+
+
+
+SQL> select instr('gowtham raj','sai') from dual;
+
+
+2.Write an query using the INSTR function to check whether the substring 'radha' 
+  is exists in the given string or not
+
+Given string: krishna stami lord krishna jai krishna
+
+
+
+3.Find 4th apperence of 'a' in the string 'Maharashtraa'[INTERVIEW QUESTION]
+
+
+
+4.Write a query which is used to retrieve first part(before first .)
+  from the MAILID column in the EMAILS table by using
+  substr(),instr() functions 
+
+create table emails
+(
+mailid varchar2(30)
+);
+
+insert into emails values('abc.xyz@gmail.com');
+insert into emails values('pqrst.kkkk@gmail.com');
+commit;
+
+
+
+
+SQL>SELECT * FROM EMAILS;
+
+    MAILID
+  ----------
+  abc.xyz@gmail.com
+  pqrst.kkkk@gmail.com
+
+
+
+5.Check the following query outputs
+
+ *
+***Translate() and Replace():-
+ * =========================
+
+Translate() is used to replaces character by character 
+where as replace() is used to replaces character by string (or)
+string by string.
+
+
+SQL> select translate('india','in','xy'),replace('india','in','xy')
+     from dual;
+
+SQL> select translate('JOHN','H','N') from dual;
+
+
+SQL> select replace('JOHN','H','N') from dual;
+
+
+SQL> select translate('JOHN','H','AMMERPET') from dual;
+
+
+SQL> select replace('JOHN','H','AMMERPET') from dual;
+
+
+SQL> select translate('ABCDEF','FEDCBA','123456') from dual;
+
+
+SQL> select replace('A B C',' ','india')from dual;
+
+
+Note: in oracle whenever we are not using specifying third parameter
+====  then specified character or specified string in 2nd parameter
+      permanently removed from the given first parameter.
+
+
+SQL> select replace('SSMISSTHSS','S') from dual;
+
+
+SQL> select replace('SSMISSTHS','THS') from dual;
+
