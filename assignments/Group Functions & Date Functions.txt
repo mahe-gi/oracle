@@ -1,0 +1,175 @@
+                       GROUP FUNCTIONS Task
+                    =========================
+
+     oracle having following group functions.
+These are
+1)max()
+2)min()
+3)avg()
+4)sum()
+5)count(*)
+6)count(columnname)
+
+       all group functions are operate over no of values in a 
+table column and then returns single value.
+
+
+-----------------------------------------------------------------------------------------
+
+1.Write a query to display total salary from emp table?
+
+
+
+2.Write a query to display total salaries of all managers
+  from emp table?
+
+
+3.Write a query to display total salaries of 10,30 departments 
+  from table?
+
+
+4.Write a query to display average salary of all employees from emp table?
+
+
+5.Write a query to display average salary of all clerks
+  from emp table?
+
+
+6.Write a query to display minimum salary from emp table? 
+
+
+7.Write a query to display maximum salary from emp table?
+
+
+8.Write a query to display maximum and minimum salary from emp table?
+
+
+9.Write a query to display the total no of employees in emp table?
+
+
+10.Write a query to display the no of managers in emp table?
+
+
+11.Write a query to display the no of employees in 10,30 
+   departments from emp table?
+
+
+12.Write a query to display the no of employees in 4th quarter
+   from emp table?
+
+
+Count(column name):- It counts number of not null values within
+==================      a column. 
+
+
+13.Write a query to display how many employees are
+   getting commission from emp table?
+
+
+14.What is the output of the following statement
+
+select Max(100,200) from dual;
+
+A. 100  
+   
+B. 100,200
+
+C. 200       
+    
+D. Error
+
+
+Answer:
+
+
+
+15.A table T_COUNT has 12 number values as 1,2,3,32,1,1,null,
+   24,12,null,null,32
+
+predict the output of the below query
+
+select count(*) from T_count;
+
+A. 6
+
+B. 12            
+    
+C. 9
+
+D. Throws exception because COUNT function doesn't work with null values
+
+
+Answer:
+-----------------------------------------------------------------------------------------
+                              Date Functions Task
+                            ========================
+
+DATE FUNCTIONS:-In oracle by default date format is DD-MON-YY
+==============
+
+   oracle having following predefined date functions.these
+are
+
+1.sysdate
+2.systimestamp
+3.add_months()
+4.last_day()
+5.next_day()
+6.months_between()
+
+
+1.Write a query to display current system date?
+
+
+2.Write query to display the current system date and time?
+
+systimestamp:-it returns current date of the system and time
+
+
+SQL>select systimestamp from dual;
+
+SYSTIMESTAMP
+-------------------------------------
+04-SEP-25 03.36.06.704000 PM +05:30
+
+
+3.Write a query to display last date of the current month?
+
+
+4.Write a query to display last date of the month from the
+  given date 16-APR-2024?
+
+
+5.Write a query to display next month first date?
+
+
+6.Write a query to display first date of the current month by using 
+  sysdate,add_months(),last_day() functions?
+
+
+7.Write a query to display next Friday's date?
+
+
+8.Write a query to display next month first sunday date?
+
+
+9.Write a query which is used to display employee names and also number of years 
+  those employees are working upto today's date from emp table
+  by using months_between() function?
+
+
+10.Calulate age( in the form of years and months) of kiran. if dob of
+   kiran is 31-DEC-1997?
+
+SQL> select trunc(months_between(sysdate,'31-dec-1996')/12) as years,
+     trunc(mod(months_between(sysdate,'31-dec-1996'),12)) as months from dual;
+
+OUTPUT:-
+======
+
+       YEARS      MONTHS
+     --------    --------
+        28          7
+
+
+
