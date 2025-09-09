@@ -1,0 +1,438 @@
+                            SQL FUNCTION MCQ'S
+                          ======================
+
+
+1.Which of the following are the five built-in functions
+  provided by SQL?
+
+a) COUNT,SUM,AVG,MAX,MIN
+
+b) SUM,AVG,MIN,MAX,MULT
+
+c) SUM,AVG,MULT,DIV,MIN
+
+d) SUM,AVG,MIN,MAX,NAME
+
+
+Answer:
+
+--------------------------------------------------------------------------
+
+2.select ----- from instructor where deptname='Comp.Sci';
+
+Which of the following should be used to find the mean
+of the salary?
+
+a) Mean(salary)
+
+b) Avg(salary)
+
+c) Sum(salary)
+
+d) Count(salary)
+
+
+ANSWER:-
+
+-------------------------------------------------------------------------
+
+3.select ROUND(89.4),TRUNC(89.8) from dual;
+
+ Which values are displayed
+
+a) 90,89    
+
+b) 90,90
+
+c) 89,89           
+  
+d) 89,90
+
+
+Answer:
+
+--------------------------------------------------------------------------
+
+4.What is the output of the following statement
+
+select Max(100,200) from dual;
+
+a) 100  
+   
+b) 100,200
+
+c) 200       
+    
+d) Error
+
+
+Answer:
+
+--------------------------------------------------------------------------
+
+5.A table T_COUNT has 12 number values as 1,2,3,32,1,1,null,
+  24,12,null,null,32
+
+predict the output of the below query
+
+select count(*) from T_count;
+
+a) 6
+
+b) 12            
+    
+c) 9
+
+d) Throws exception because COUNT function doesn't work with null values
+
+
+Answer:
+
+--------------------------------------------------------------------------
+
+6.Select round(45.95),trunc(45.95) from dual;
+
+   Which values are displayed
+
+a) 46 and 45    
+
+b) 45 and 46
+
+c) 46 and 46         
+
+d) none
+
+
+Answer:
+
+--------------------------------------------------------------------------
+
+7.Select SUBSTR('NARESH IT,HYDERABAD',1,9) from dual;
+
+
+a) NARESH            
+
+b) IT
+
+c) NARESH IT    
+
+d) HYDERABAD
+
+Answer:
+
+--------------------------------------------------------------------------
+8.select instr('Maharashtraa','a',3,4) from dual;
+
+  What is the output of the following query
+
+a) 11
+
+b) 0
+
+c) 12
+
+d) None of the above
+
+Answer:
+--------------------------------------------------------------------------
+9.The SQL statement:
+SELECT ROUND (65.726, -1) 
+
+a) 0
+
+b) ERROR
+
+c) 726
+
+d) 70
+
+
+Answer:
+
+--------------------------------------------------------------------------
+10.SELECT ROUND(45.953, -1), ROUND(45.936, 2) FROM dual;
+
+   What is the output of the above query ?
+
+a) 46 and 45
+
+b) 46 and 45.93
+
+c) 50 and 45.93
+
+d) 50 and 45.94
+
+e) 45 and 45.93
+
+
+Answer:
+
+--------------------------------------------------------------------------
+11.In Oracle, the "TO_DATE" function is used to:
+
+a) It Convert date string into a date type
+
+b) Convert a date into a string
+
+c) Add a time duration to a date
+
+d) Subtract a date from another date
+
+
+Answer:
+
+--------------------------------------------------------------------------
+12.Which of the following is NOT an Oracle built-in function?
+
+a) COUNT(*)
+
+b) MAX()
+
+c) AVERAGE()
+
+d) MIN()
+
+
+Answer:
+
+--------------------------------------------------------------------------
+13.Which of the following SQL functions in Oracle returns
+   the number of rows in a table?
+
+a) NUM()
+
+b) TOTAL()
+
+c) COUNT(*)
+
+d) ROWCOUNT()
+
+
+Answer:
+
+
+--------------------------------------------------------------------------
+14.In oracle SQL, What is the result of the following expression
+
+   select round(50.456,1) from dual;
+
+
+a) 50.4
+
+b) 50.5
+
+c) 50.46
+
+d) 50.45
+
+Answer:
+
+--------------------------------------------------------------------------
+
+15. Which three tasks can be performed using SQL functions ? (Choose
+     three.)
+
+a) Combining more than two columns or expressions into a single 
+   column in the output
+
+b) Displaying a date in a non default format
+
+c) Substituting a character string in a text expression
+   with a specified string
+
+d) Finding the number of characters in an expression
+
+Answer:
+
+
+--------------------------------------------------------------------------
+16. Which of the following function cannot be applied on a column
+    START_DATE ?
+
+a) to_char()
+
+b) months_between()
+
+c) substr()
+
+d) Avg()
+
+Answer:
+
+
+--------------------------------------------------------------------------
+17.Which Oracle function can be used to find the length of a string?
+
+a) LENGTH()
+
+b) SIZE
+
+c)  LEN
+
+d) CHAR_LENGTH
+
+Answer:
+
+
+--------------------------------------------------------------------------
+
+18. Which of the following SQL statements will retrieve the highest salary
+    from the employees table in Oracle?
+
+a) SELECT MAX(salary) FROM employees;
+
+b) SELECT TOP 1 salary FROM employees ORDER BY salary DESC;
+
+c) SELECT salary FROM employees WHERE salary = MAX(salary);
+
+d) SELECT FIRST(salary) FROM employees;
+
+
+Answer:
+
+-------------------------------------------------------------------------
+19.Which function is used to extracts a substring?
+
+a) TO_CHAR()
+
+b) SUBSTR()
+
+c) NVL()
+
+d) ROUND()
+
+Answer:
+
+
+--------------------------------------------------------------------------
+
+20.What does TO_CHAR(sysdate, 'DD-MON-YYYY') return?
+
+a) Current timestamp
+
+b) Formatted date string
+
+c) Numeric day
+
+d) Month name
+
+Answer:
+
+--------------------------------------------------------------------------
+
+21.Which function aggregates data across multiple rows?
+
+a) ROUND()
+
+b) SUM()
+
+c) TO_DATE()
+
+d) SUBSTR()
+
+Answer:
+
+--------------------------------------------------------------------------
+22.Which function returns the highest value in a table column?
+
+a) MIN
+
+b) MAX
+
+c) AVG
+
+d) SUM
+
+Answer:
+
+--------------------------------------------------------------------------
+23.What error will occurred when we are executing following
+    SQL query
+
+    SQL> select * from emp where sal= min(sal);
+
+a) The query will return all rows where the salary equals
+    to the total salary.
+
+b) The query will return only one row.
+
+c) group function is not allowed here
+
+d) not a single-group group function
+
+
+Answer:
+
+-------------------------------------------------------------------------
+
+24.Which function can be used to replace NULL values with
+   a default value?
+
+a) NVL
+
+b) SUM
+
+c) COUNT
+
+d) ROUND
+
+Answer:
+
+-------------------------------------------------------------------------
+
+25.What does the AVG function return?
+
+a) The sum of values
+
+b) The average value
+
+c) The minimum value
+
+d) The maximum value
+
+Answer:
+
+--------------------------------------------------------------------------
+
+26.Which function returns the remainder of a division?
+
+a) MOD
+
+b) ROUND
+
+c) FLOOR
+
+d) CEIL
+
+Answer:
+
+--------------------------------------------------------------------------
+27. Which date function returns the current system date in
+    oracle date format?
+
+a) SYSDATE
+
+b) GETDATE
+
+c) NOW
+
+d) CURRENT_DATE
+
+Answer:
+
+--------------------------------------------------------------------------
+
+28.What does NVL(salary, 0) do?
+
+a) Converts NULL to 0
+
+b) Rounds salary to 0 decimals
+
+c) Sums salary with 0
+
+d) Checks if salary is 0
+
+Answer: a) 
+
+
+
