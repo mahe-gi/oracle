@@ -1,0 +1,209 @@
+                                JOINS TASK
+                              ==============
+
+JOINS:- Joins are used to retrieve data from  
+======           multiple tables. 
+ 
+
+.In all relational databases when we are joining 'n' tables then we must
+ use 'n-1' joining conditions. 
+
+.join condition decides which record in one table should joined
+ with which record in another table.
+
+EQUI JOIN:-Based on equality condition(by using equality operator) 
+=========  we are retrieving data from multiple tables. Here joining
+           conditional columns must belongs to same datatype.
+
+NOTE:-Always equi join returns matching rows only(Here deptno 40
+===== does not display when we are using dept.deptno also)
+ 
+
+1.Inner join:- This join also returns matching rows only. Here also
+=============  joining conditional columns must belongs to same 
+               data type. Inner join (9i) performance is very high
+               compare to oracle 8i equi join.
+
+
+NOTE:-Equi join and inner join are same. if we are interested in inner 
+      join write the queries by using inner join.no problem
+
+
+USING TABLE ALIASNAMES JOINS:-
+=============================
+   In all relational databases for improve performance of the joins we can also
+use table aliasnames for the tables in from clause.Then those alias names must 
+be used in place of tablename with in select list and also with in the 
+joining condition.
+
+
+-----------------------------------------------------------------------------------
+1.Write a query to display the employee names and their 
+  department names from emp, dept tables.
+
+2.Write a query to display the employee names and their
+  locations from emp, dept tables
+
+3.Write a query to display the employees who are working
+  in the location CHICAGO from emp, dept tables by using
+  inner join?
+
+Note: If we want to filter the data after joining condition then we 
+===== must use AND operator in 8i joins. where as in 9i joins we are
+      using either AND operator or WHERE clause also.
+
+
+
+4.Write a query to display no of employees in each location from 
+  emp, dept tables by using equi join or inner join?
+
+
+5.Write a query to display dname, sum(sal) from emp,dept
+   tables by using equi join or inner join?
+
+
+6.Write a query to display department name and sum of salaries and whose 
+  sum of salaries is more than 9000 from emp,dept tables
+   
+
+
+7.Write a query to display blake employee record along with department details
+   from emp, dept tables?
+
+
+8.Write a query to display student details and faculty details 
+  from studentenrollment and faculty tables.
+                   
+                        (or)
+
+  Write a query to display student names and their faculty names
+  from studentenrollment and faculty tables
+
+
+SQL> SELECT * FROM STUDENTENROLLMENT;
+
+SNAME            FID
+---------     ---------
+GOWTHAM          1001
+SUBBARAO         1001
+GOWTHAM          1002
+SURYA            1001
+ANUSHKA
+KIRAN
+SUBBARAO         1002
+KAVYA            1003
+
+
+
+SQL> SELECT * FROM FACULTY;
+
+       FID           FNAME             SUBJECT         AGE
+     -------    -----------------     ----------     --------
+      1001           MURALI            ORACLE          38
+      1002        HARI KRISHNA         CORE JAVA       36
+      1003       SHIV CHAITANYA        ORACLE          32
+
+
+9.Write query to display the students names and along with their
+  faculty name,subject,age .Show only the students who are 
+  assigned to faculty that teach the subject 'ORACLE'.
+  Use INNER JOIN or EQUI JOIN 
+
+  
+10.Write an SQL query to display the student names
+  (whose names starts with 'S') along with their faculty name, 
+  subject, and age. Show only the records where the faculty teaches 
+  'ORACLE' and their age is between 35 and 40, using INNER JOIN or EQUI JOIN.
+
+
+
+11.Write an SQL query to display the names of students who are enrolled under          faculty members who teach the subject 'CORE JAVA'.
+
+
+Non Equi Join:-Based on other than equality 
+=============  operator(>,<,>=,<=,<>,between,….)  we can retrieve
+               data from multiple tables. Here also joining conditional
+               columns belongs to same data type. In oracle, this join
+               is also called as Between….. and Join.
+
+
+
+7.Check the following non equi join output
+SQL>select * from test3;
+ 
+      deptno
+     ---------
+        10
+        20
+
+SQL>select * from test4;
+       
+       deptno
+     ---------
+         10
+         20
+         30
+
+SQL>select * from 
+    test3 , test4
+    where test3.deptno>test4.deptno;
+
+
+
+NOTE:-in oracle when ever one table columns lies between another table
+=====  two columns then also we are retrieving data from those tables
+       by using non equi join.
+
+EG:-
+===
+SQL>select * from emp;
+SQL>select * from salgrade;
+
+SQL>select ename,sal,losal,hisal 
+    from emp inner join salgrade
+    on sal between losal and hisal;
+
+              (OR)
+
+SQL>select ename,sal,losal,hisal
+    from emp inner join salgrade
+    on sal>=losal and sal<=hisal;
+
+
+
+
+
+-----------------------------------------------------------------------------------
+TABLE CREATIONS & INSERTIONS
+============================
+CREATE TABLE FACULTY (
+    FID NUMBER(10) PRIMARY KEY,
+    FNAME VARCHAR(20),
+    SUBJECT VARCHAR(10),
+    AGE NUMBER(2)
+);
+
+CREATE TABLE STUDENTENROLLMENT ( 
+    SNAME VARCHAR2(10),
+    FID NUMBER(10) REFERENCES Faculty(FID)
+);
+
+INSERT INTO FACULTY VALUES (1001, 'MURALI', 'ORACLE', 38);
+INSERT INTO FACULTY VALUES(1002, 'HARI KRISHNA', 'CORE JAVA', 36);
+INSERT INTO FACULTY VALUES(1003, 'SHIV CHAITANYA', 'ORACLE', 32);
+
+INSERT INTO STUDENTENROLLMENT VALUES('GOWTHAM',1001);
+INSERT INTO STUDENTENROLLMENT VALUES('SUBBARAO',1001);
+INSERT INTO STUDENTENROLLMENT VALUES('GOWTHAM',1002);
+INSERT INTO STUDENTENROLLMENT VALUES('SURYA', 1001);
+INSERT INTO STUDENTENROLLMENT VALUES('ANUSHKA',NULL);
+INSERT INTO STUDENTENROLLMENT VALUES('KIRAN',NULL);
+INSERT INTO STUDENTENROLLMENT VALUES('SUBBARAO',1002);
+INSERT INTO STUDENTENROLLMENT VALUES('KAVYA', 1003);
+
+COMMIT;
+
+
+SELECT * FROM STUDENTENROLLMENT;
+
+SELECT * FROM FACULTY;
