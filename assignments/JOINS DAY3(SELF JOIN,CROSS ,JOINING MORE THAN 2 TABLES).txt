@@ -1,0 +1,298 @@
+                           Self Join
+                         ============
+
+Self join:-Joining a table to itself is called self join. Here 
+=========  joining conditional columns must belongs to
+           same data type.
+
+  Generally in all relational databases self joins are used in
+following 2 senarios. These are
+
+1)Compare one table one column any value with all other values
+  in same column.
+
+2)Compare 2 different column values(same datatype) in a same table
+
+   Whenever we are using self joins then we must create table
+aliasnames in from clause. These aliasnames internally behaves
+like exact tables when query execution time.
+
+--------------------------------------------------------------------------
+ *
+*1*Write a query to display the employee names and their manager names
+ * from emp table by using self join(V.V.I.M.P)
+
+
+2.Write a query to display the employee records who are reporting
+   to BLAKE as a manager by using self join?
+
+
+
+3.Write a query to display the employees who are getting more salary 
+   than their manager salary from emp table using self join?
+
+
+
+4.Write a query to display BLAKE'S manager name from emp table by
+  using self join?
+
+
+
+5.Write a query to display the employees who are joining
+         before their managers from emp table
+                by using self join?
+
+
+
+6. Write a query to display the employees who are getting same salary
+    as SCOTT salary from emp table using self join?
+
+NOTE:-when we are comparing one column any value with all
+====   other values in same column by using self join then
+       we must display data from second alias table only.
+
+
+-----------------------------------------------------------------------------------
+7.Write an SQL query to fetch student names and course names, 
+  order by student ID, returning only the first 6 records.
+  Use the following tables[HCL FACE TO FACE INTERVIEW QUESTION]
+
+SQL> SELECT * FROM STUDENT;
+
+    STUDENT_ID      STUDENT_NAME
+    ----------    ---------------
+         1           SURYA
+         2           GOWTHAM
+         3           ANUSHKA
+         4           KIRAN
+         5           KAVYA PAPA
+         6           SHREYES
+         7           RADHIKA
+         8           PREETHI
+         9           NITISH
+        10           ABHISHEK
+
+10 rows selected.
+
+SQL> SELECT * FROM FEE;
+
+     STUDENT_ID     COURSE_FEE
+     ----------     ----------
+         1            5000
+         2            4000
+         3            5000
+         4            3000
+         5            4000
+         6            7000
+         7            6000
+         8            4000
+         9            7000
+        10            5000
+
+10 rows selected.
+
+SQL> SELECT * FROM COURSE;
+
+   COURSE_FEE       COURSE_NAME
+   ----------     ---------------
+      3000          SQLSERVER
+      4000          ORACLE
+      5000          JAVA
+      6000          PHYTHON
+      7000          .NET
+
+
+8.Write a query to display SEAT_NUMBER(use alias SEATNO),
+  CATEGORY_NAME(use alias CATEGORYNAME) of seat in stadium
+  EDEN GARDENS and display the output in the order of 
+  descending order of seat number[COGNIZANT INTERVIEW QUESTION]
+
+your output should have 2 columns as given below
+
+  SEATNO      CATEGORYNAME
+
+
+
+SQL>select * from seats;
+
+
+	STADIUM_ID	SEAT_NUMBER	CATEGORY_ID
+        ----------     ------------    -------------
+	    1	           A105	            2
+	    1	           A110        	    3
+	    1	           A120	            1
+	    2	           B101     	    2
+
+
+
+SQL>SELECT * FROM SEATCATEGORIES;
+
+CATEGORY_ID	CATEGORY_NAME         PRICE
+-----------     -------------       ----------
+   1	            VIP               5000
+   2	          PREMIUM             3000
+   3	          GENERAL             1500
+
+
+
+
+SQL>SELECT * FROM STADIUM;
+
+STADIUM_ID	STADIUM_NAME       LOCATION          CAPACITY
+----------     -------------      ----------       ------------ 
+1	        EDEN GARDENS       KOLKATA            66000
+2	         UPPAL             HYDERABAD          55000
+
+
+
+-----------------------------------------------------------------------------------
+Cross Join:- This join returns the Cartesian product of two tables.
+==========
+
+           In oracle, we can also retrieve data from multiple tables without 
+using join condition .in this case oracle server internally uses default join.
+in oracle 8i side default join is cross join. 
+
+
+
+SQL>select ename,sal,dname,loc
+    from emp,dept;
+
+o/p:56 rows displayed(internally cross join is performed)
+
+
+Q)Write a query to generate all possible combinations of car names and colors, so   that each car name appears once with every color. 
+
+SQL>SELECT * FROM CARNAMES;
+
+    CARNAME
+   ---------
+     BMW
+     TOYOTA
+     HONDA
+
+SQL>SELECT * FROM COLORS;
+
+    COLOUR
+   --------
+    RED
+    BLUE
+    BLACK
+
+-----------------------------------------------------------------------------------
+DROP TABLE STUDENT;
+DROP TABLE COURSE;
+DROP TABLE FEE;
+
+DROP TABLE SEATS;
+DROP TABLE SEATCATEGORIES;
+DROP TABLE STADIUM;
+
+CREATE TABLE STUDENT (
+    STUDENT_ID NUMBER(10) PRIMARY KEY,
+    STUDENT_NAME VARCHAR2(20)
+);
+
+
+
+CREATE TABLE COURSE (
+    COURSE_FEE NUMBER(10) PRIMARY KEY,
+    COURSE_NAME VARCHAR2(20)
+);
+
+CREATE TABLE FEE(
+    STUDENT_ID NUMBER(10),
+    COURSE_FEE NUMBER(10) ,
+    FOREIGN KEY (STUDENT_ID) REFERENCES student(STUDENT_ID),
+   FOREIGN KEY(COURSE_FEE) REFERENCES COURSE(COURSE_FEE)
+);
+
+
+
+INSERT INTO STUDENT VALUES (1, 'SURYA');
+INSERT INTO STUDENT VALUES (2, 'GOWTHAM');
+INSERT INTO STUDENT VALUES (3, 'ANUSHKA');
+INSERT INTO STUDENT VALUES (4, 'KIRAN');
+INSERT INTO STUDENT VALUES (5, 'KAVYA PAPA');
+INSERT INTO STUDENT VALUES (6, 'SHREYES');
+INSERT INTO STUDENT VALUES (7, 'RADHIKA');
+INSERT INTO STUDENT VALUES (8, 'PREETHI');
+INSERT INTO STUDENT VALUES (9, 'NITISH');
+INSERT INTO STUDENT VALUES (10, 'ABHISHEK');
+
+
+INSERT INTO COURSE VALUES (3000, 'SQLSERVER');
+INSERT INTO COURSE VALUES (4000, 'ORACLE');
+INSERT INTO COURSE VALUES (5000, 'JAVA');
+INSERT INTO COURSE VALUES (6000, 'PHYTHON');
+INSERT INTO COURSE VALUES (7000, '.NET');
+ 
+
+
+INSERT INTO FEE VALUES (1, 5000);  
+INSERT INTO FEE VALUES (2, 4000);  
+INSERT INTO FEE VALUES (3, 5000);  
+INSERT INTO FEE VALUES (4, 3000);  
+INSERT INTO FEE VALUES (5, 4000);  
+INSERT INTO FEE VALUES (6, 7000);  
+INSERT INTO FEE VALUES (7, 6000);  
+INSERT INTO FEE VALUES (8, 4000); 
+INSERT INTO FEE VALUES (9, 7000);  
+INSERT INTO FEE VALUES (10, 5000); 
+
+
+CREATE TABLE STADIUM (
+    STADIUM_ID     NUMBER(10) PRIMARY KEY,
+    STADIUM_NAME   VARCHAR2(20),
+    LOCATION       VARCHAR2(20),
+    CAPACITY      NUMBER(10)
+);
+
+
+CREATE TABLE SEATCATEGORIES (
+    CATEGORY_ID    NUMBER(10) PRIMARY KEY,
+    CATEGORY_NAME  VARCHAR2(20),
+    PRICE          NUMBER(10)
+);
+
+
+CREATE TABLE SEATS (
+    STADIUM_ID    NUMBER(10) REFERENCES stadium(STADIUM_ID),
+    SEAT_NUMBER   VARCHAR2(10),
+    CATEGORY_ID    NUMBER(10) REFERENCES SEATCATEGORIES(CATEGORY_ID) 
+);
+
+
+INSERT INTO STADIUM VALUES (1, 'EDEN GARDENS', 'KOLKATA', 66000);
+INSERT INTO STADIUM VALUES (2, 'UPPAL', 'HYDERABAD', 55000);
+
+
+INSERT INTO SEATCATEGORIES VALUES (1, 'VIP', 5000);
+INSERT INTO SEATCATEGORIES VALUES (2, 'PREMIUM', 3000);
+INSERT INTO SEATCATEGORIES VALUES (3, 'GENERAL', 1500);
+
+
+INSERT INTO SEATS VALUES (1, 'A105', 2);
+INSERT INTO SEATS VALUES (1, 'A110', 3);
+INSERT INTO SEATS VALUES (1, 'A120', 1);
+INSERT INTO SEATS VALUES (2, 'B101', 2);
+
+
+commit;
+
+SELECT * FROM STUDENT;
+
+SELECT * FROM COURSE;
+
+SELECT * FROM FEE;
+
+SELECT * FROM SEATS;
+
+SELECT * FROM SEATCATEGORIES;
+
+SELECT * FROM STADIUM;
+
+
+
+
+     
