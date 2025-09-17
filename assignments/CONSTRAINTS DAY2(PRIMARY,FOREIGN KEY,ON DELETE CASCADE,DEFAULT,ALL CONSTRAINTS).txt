@@ -1,0 +1,177 @@
+                               CONSTRAINTS TASK
+                              ===================
+
+4.Foreign Key:-in all relational databases If we want to establishes
+=============  relationship between tables then we are using 
+               referential integrity constraint Foreign Key.
+
+
+  Generally One table foreign key must belongs to another table
+primary key. And also these primary key, foreign key columns must
+belong to same datatype.
+
+  Always foreign key values based on related primary key values only.
+Generally primary key doesn't accepts duplicate, null values 
+where as foreign key accepts duplicate, null values.
+
+----------------------------------------------------------------------------------- 
+1.Establish the relation b/w courses and students table by using
+  Primary key, Foreign key with the following Rules
+
+--->after creating the table insert the records and observe
+    the outputs.
+
+Rules:-
+
+1.cid must be unique and not null.
+2.cname must be not null.
+
+
+Rules:-
+
+1.sid doesn't accept nulls and duplicates
+2.sname doesn't  accept nulls
+3.cid should present in courses table cid column
+
+
+-----------------------------------------------------------------------------------
+2.Create following ACCOUNTS, TRANSACTIONS tables with given rules ?
+
+Rules :- 
+
+1. ACCNO should not be duplicate and null
+2. ACTYPE  should be ‘S’ OR ‘C’
+3. Bal must be min 1000
+
+
+Rules :- 
+
+1. TRID should not be duplicate and null
+2. TTYPE  must be 'W' OR 'D'
+3. By default TDATE is today’s date
+4. AMT must be multiple of 100
+5. ACCNO should present in accounts table ACCNO column
+
+--------------------------------------------------------------------------
+3. Create following CUSTOMER123,ORDERS123 tables with given rules ?
+
+
+Rules:-
+
+1. CUSTID must be unique and not null.
+
+2. CNAME must be not null.
+
+3. CITY must be either GUNTUR,VJD, or HYD
+
+
+
+Rules:-
+
+1. ORDERID must be unique and not null.
+
+2. ODATE must be default to the current date.
+
+3. AMOUNT must be greater than 0.
+
+4. CUSTID must be present in the CUSTOMER table.
+
+
+----------------------------------------------------------------------------------
+ON DELETE CASCADE:-On delete cascade clause used along with foreign key
+                   constraint. Whenever child table having on delete
+                   cascade clause. If we are deleting master table
+                   records from master table then automatically
+                   deleted from child.
+
+
+
+4.Create mas table, child table and establish relation b/w tables.
+
+--->after creating the tables insert the records. delete the mas table
+    records and observe the outputs in child table.
+
+mas
+---
+sno ---->primary key 
+
+child
+----
+sno ---->foreign key along with on delete cascade 
+                         
+
+----------------------------------------------------------------------------------
+5.Create the emp5 table with following columns. and you only 
+  think which constraint is suitable at the time of table creation 
+  it self and use all constraints(SQL SERVER MOCK INTERVIEW QUESTION)
+
+NOTE:-for this question just create the table with constraints
+       is enough.
+
+EMPNO     ENAME     SAL     MGRNO     AGE     ADDRESS    PHONO
+
+
+---------------------------------------------------------------------------------
+Default -in all relational databases if we want to provide
+=======  default values into a table column then we are using
+         default clause.
+
+• It is used to apply default value to table column.
+
+• If we pass the value, it takes that value. if we don't pass the value
+  it takes default value.
+
+
+syntax:-
+======
+columnname datatype(size) default defaultvalue
+
+EG:-
+===
+
+SQL>create table test4(name varchar2(10), sal number(10) default 3000);
+
+SQL>insert into test4(name)values('SURYA');----->Skipping columns method
+
+SQL>insert into test4 values('ANUSHKA',5000);
+
+SQL>select * from test4;
+   
+    NAME         SAL
+  -------     ---------
+  SURYA          3000
+  ANUSHKA        5000
+
+--------------------------------------------------------------------------
+
+6.Create a student10 table with 4 columns and apply following constraints.
+
+--->after creating the table insert the records and observe
+    the outputs.
+
+SID           don't accept duplicate values and null values
+SNAME         don't accept null values
+INAME         by default INAME  is NARESHIT
+CITY          by default CITY is AMMERPET 
+FEE           by default FEE is 30000
+
+
+----------------------------------------------------------------------------------
+7.Create test123 table with following constraints by using table level
+
+SNO        it doesn't accept null values and duplicate values
+
+SNAME      should be capital letters 
+
+SAL        more than 9000
+
+
+      
+
+     
+
+
+
+
+
+
