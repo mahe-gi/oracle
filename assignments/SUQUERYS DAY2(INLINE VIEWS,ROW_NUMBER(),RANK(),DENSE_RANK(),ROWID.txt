@@ -1,0 +1,198 @@
+                    INLINE VIEW & ANALYTICAL FUNCTIONS & ROWID
+                   ==============================================
+
+
+1.Inline view:- Oracle 7.2 introduced Inline views.in place of tablename
+                 we are writing subquery is called inline view.
+
+
+Syntax:-
+=======
+ select * from (subquery);
+
+
+
+1.Write a query to display the employees who are getting more
+  than 30000 annsal from emp table?
+
+
+Note:-in where clause we are not allowed to use column aliasname.
+===== then those type of queries we are putting in inline view.
+      then internally column aliasname behaves like a exact table
+      column 
+
+
+               -----------------------------
+select * from( |  ename  |  sal |  annsal  |)where annsal>300000;
+               -----------------------------
+               |         |      |          |
+               -----------------------------
+
+
+-----------------------------------------------------------------------------------
+ *
+***What are analytical functions (or) window functions?[V.V.I.M.P]
+ *
+Analytical functions
+====================
+Oracle having following analytical functions. These are
+
+   1.row_number()
+
+   2.rank()
+ *
+***3.dense_rank()
+ *
+
+
+syntax:-
+=======
+
+Analyticalfunctionname()over(partition by columnname order by
+                              columnname[asc/desc])
+
+   in these 3 analytical functions partition by clause is optional 
+order by clause is mandatory.
+
+   These 3 analytical functions automatically assigns ranks either
+group wise or rows wise in a table.
+
+ *
+***What are the differences b/w rank,dense_rank() and row_number()?[V.V.I.M.P]
+ *
+
+   Row_number() analytical function automatically assigns different rank numbers
+when values are same whereas rank(), dense_rank() functions automatically assigns
+same rank numbers when values are same and also rank() skips next consecutive rank numbers where as dense_rank() does not skips next consecutive rank numbers
+
+
+
+   
+eg:-
+=====
+ROW_NUMBER():-
+=============
+
+             ENAME         SAL         R
+            --------     -------     -----
+              SCOTT        6000        1
+              FORD         6000        2
+              JONES        5000        3
+              ALLEN        3000        4
+              SMITH        3000        5
+              MILLER       3000        6
+              MARTIN       2000        7
+              ADAMS        1000        8
+
+
+
+RANK():-
+========
+
+              ENAME         SAL        R
+            --------     -------     -----
+              SCOTT        6000        1
+              FORD         6000        1
+              JONES        5000        3
+              ALLEN        3000        4
+              SMITH        3000        4
+              MILLER       3000        4
+              MARTIN       2000        7
+              ADAMS        1000        8
+
+
+
+DENSE_RANK():-
+=============
+ 
+             ENAME         SAL         R
+            --------     -------     -----
+              SCOTT        6000        1
+              FORD         6000        1
+              JONES        5000        2
+              ALLEN        3000        3
+              SMITH        3000        3
+              MILLER       3000        3
+              MARTIN       2000        4
+              ADAMS        1000        5
+
+
+-----------------------------------------------------------------------------------
+ *
+*1* Write a query to display 2nd highest salary employee from emp table
+ *  by using analytical function ?[V.V.I.M.P]
+
+
+
+ 
+2.Write a query to display 3rd highest salary employee in each department
+  from emp table by using analytical function ?
+
+
+
+3.Write a query to display 5th highest salary employee from emp table 
+  by using analytical function?
+
+
+
+ *
+*4*.Write a query to display nth highest salary employee from emp table 
+ *  by using analytical function?[V.V.I.M.P]
+
+
+
+5.Write a query using ROW_NUMBER() to display the top 3 highest-paid 
+  employees in the company.
+
+
+6.Write a query to assign a rank to employees based on their salary descending
+  order using row_number() and rank() and observe the outputs.
+
+
+
+
+
+-----------------------------------------------------------------------------------
+ *
+***Delete duplicate rows from a table
+ * ==================================
+
+     in all relational databases delete duplicate rows except one row in
+each group in a table is also called as delete duplicate rows in a table.
+if we want to delete duplicate rows from a table then we must
+use rowid.
+
+
+ *
+*1* Write a query to delete duplicate rows from following table[V.V.I.M.P]
+ *
+
+
+SQL>SELECT * FROM TEST;
+          
+         deptno
+      ----------
+           10
+           10
+           10
+           20
+           20
+           20
+           30
+           30
+           40
+           50
+
+         (OR)
+
+SQL> SELECT * FROM EMP111;
+
+      EMPNO        ENAME
+     -------    ----------
+         1        SURYA
+         2        ANUSHKA
+         3        ANUSHKA
+         4        GOWTHAM
+         5        SURYA
+         6        SHRUTHI
+

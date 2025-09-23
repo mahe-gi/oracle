@@ -1,0 +1,73 @@
+                              ROWNUM
+                             ==========
+
+1.Write a query to display first row from emp table using rownum?
+
+
+
+NOTE:-Generally, rownum doesn't work with more than 1 +ve integer, 
+=====  i.e., it works with <, <= operators.
+
+
+2.Write a query to display first 5 rows from emp table
+   by using rownum ?
+
+
+ *
+*3*Write a query to display last 2 rows from emp table
+ *  by using ROWNUM ?
+
+SQL>select * from emp
+    minus
+    select * from emp where rownum<=(select count(*)-2 from emp);
+
+
+
+4.Write a query to display first 5 highest salary employees
+  from emp table by using inline views and rownum ?
+
+inline view + rownum =TOP-N Analysis Queries
+
+
+-----------------------------------------------------------------------------------
+ 
+Note:-in oracle we are creating rownum aliasnames in inline views 
+=====  then that aliasname work with all sql operators.
+
+5.Write a query to display 2nd row from emp table by using  
+   rownum aliasname?
+
+
+SQL>select * from (select rownum r,ename,sal from emp)
+    where r=2;
+
+                (or)
+
+SQL>select * from(select rownum r,emp.* from emp)
+    where r=2;
+
+
+
+
+6.Write a query to display rows between 4 to 8 from emp table
+   by using rownum aliasname?
+
+
+
+7.Write a query to display 2,3,5,6,10th records from emp table 
+  by using rownum aliasname?
+
+
+ *
+*8*Write a query to display even number of records from emp table
+ * by using rownum aliasname?
+
+
+
+9.Write a query to display first row, last row from emp table
+  by using rownum aliasname?
+
+
+10.Write a query to skip 3 rows and then display remaining all
+  rows from emp table by using rownum aliasname?
+
